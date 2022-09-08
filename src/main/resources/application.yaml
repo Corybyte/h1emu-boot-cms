@@ -1,0 +1,8 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://nullcg.cn:3306/mirai-data?characterEncoding=utf-8
+    username: root
+    password: cg200213
