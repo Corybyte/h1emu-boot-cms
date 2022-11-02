@@ -1,0 +1,5 @@
+com/example/h1emubootcms/entity/lexiconEntity.class
+com/example/h1emubootcms/controller/lexiconController.class
+com/example/h1emubootcms/controller/GroupController.class
+com/example/h1emubootcms/H1emuBootCmsApplication.class
+com/example/h1emubootcms/mapper/senstiveMapper.class
