@@ -1,5 +1,8 @@
 package com.example.h1emubootcms.service.impl;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.h1emubootcms.entity.WelcomeEntity;
 import com.example.h1emubootcms.mapper.WelcomeMapper;
 import com.example.h1emubootcms.service.WelcomeService;
@@ -9,7 +12,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @Service
-public class WelcomeServiceImpl implements WelcomeService {
+public class WelcomeServiceImpl extends ServiceImpl<WelcomeMapper,WelcomeEntity> implements WelcomeService {
 
     @Resource
     private WelcomeMapper welcomeMapper;
@@ -30,7 +33,7 @@ public class WelcomeServiceImpl implements WelcomeService {
     }
 
     @Override
-    public int updateWelcomeMapper(String QQID, String content) {
-        return welcomeMapper.updateWelcomeMapper(QQID,content);
+    public int updateWelcomeMapper(WelcomeEntity welcome) {
+        return welcomeMapper.updateWelcomeMapper(welcome);
     }
 }
