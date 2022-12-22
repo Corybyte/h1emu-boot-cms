@@ -1,17 +1,17 @@
 package com.example.h1emubootcms.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
-@TableName("QQWelcome")
+
 @Data
+@TableName("QQWelcome")
 public class WelcomeEntity {
-    @TableId(value = "QQID",type = IdType.NONE)
-    private String QQID;
+    @TableId(value = "QQID",type = IdType.AUTO)
+    private Integer QQID;
     @TableField("QQGroupID")
-    private String QQGroupID;
+    private Integer QQGroupID;
+    @TableField("content")
     private String content;
+
 }
