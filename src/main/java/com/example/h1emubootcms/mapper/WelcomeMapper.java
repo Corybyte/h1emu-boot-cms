@@ -11,7 +11,7 @@ import java.util.List;
 @Mapper
 @Repository
 public interface WelcomeMapper extends BaseMapper<WelcomeEntity>{
-    @Insert(value = {"insert into QQWelcome(QQID,QQGroupID,content) values (#{QQID},#{QQGroupID},#{content}"})
+    @Insert(value = {"insert into QQWelcome values (#{QQID},#{QQGroupID},#{content})"})
     public  int addWelcomeMapper(WelcomeEntity welcome);
 
     @Select(value = {"select * from QQWelcome"})
@@ -21,6 +21,6 @@ public interface WelcomeMapper extends BaseMapper<WelcomeEntity>{
     public int deleteWelcomeMapper(String id);
 
 
-    @Update(value = {"update QQWelcome set content = #{content} where QQID = #{QQID}"})
-    public int updateWelcomeMapper(@Param("QQID") String QQID,@Param("content") String content);
+    @Update(value = {"update QQWelcome set QQGroupID = #{QQGroupID},content = #{content} where QQID = #{QQID}"})
+    public int updateWelcomeMapper(WelcomeEntity welcome);
 }
